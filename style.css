@@ -1,0 +1,598 @@
+* {
+  box-sizing: border-box;
+  margin: 0
+}
+
+/* Logo container */
+#logo-container {
+  display: flex;
+}
+
+#logo-container img {
+  width: 120px;
+  height: 100px;
+  margin-right: 0;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  /* keep header fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* ensure it stays above other elements */
+  padding: 0 20px;
+  /* optional spacing */
+}
+
+/* Navbar styling */
+#nav-bar {
+  margin-left: 50px;
+  margin-right: 75px;
+}
+
+#nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 75px;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-bar li a {
+  text-decoration: none;
+  color: #EDBC91;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#nav-bar li a:hover {
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+/* Prevent content from being hidden behind fixed navbar */
+body {
+  padding-top: 120px;
+  /* adjust based on header height */
+}
+
+/* end of navbar styling */
+
+/* Make the whole viewport height */
+#welcome {
+  height: calc(100vh - 120px);
+  /* subtract header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* space text, iframe, button */
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#welcome h1 {
+  font-size: 2rem;
+  color: #000000;
+  margin: 0;
+}
+
+#welcome iframe {
+  flex: 1;
+  /* take available space */
+  width: 100%;
+  border: none;
+}
+
+.welcome-button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.welcome-button:hover {
+  background-color: #EDBC91;
+  color: #000000
+}
+
+#about {
+  max-width: 800px;
+  /* keeps text centered and narrow */
+  margin: 60px auto;
+  /* centers section horizontally */
+  padding: 20px;
+  line-height: 1.6;
+  /* improves readability */
+  text-align: center;
+  /* centers text */
+}
+
+.about-h3 {
+  color: #000000;
+  /* theme color for headings */
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #000000;
+  /* subtle underline */
+  display: inline-block;
+  /* underline fits text width */
+  padding-bottom: 5px;
+}
+
+.about-p {
+  font-size: 1.5rem;
+  color: #000000;
+  /* softer text color */
+  margin-bottom: 20px;
+}
+
+#about-closing-tag {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #000000;
+  /* highlight closing note */
+  margin-top: 30px;
+}
+
+#about {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.about-h3,
+.about-p,
+#about-closing-tag {
+  opacity: 0;
+  /* start invisible */
+  transform: translateY(20px);
+  /* slight slide from below */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-h3.show,
+.about-p.show,
+#about-closing-tag.show {
+  opacity: 1;
+  /* fade in */
+  transform: translateY(0);
+  /* move to normal position */
+}
+
+/* gene section styling */
+#gene {
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+#gene h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+#gene input {
+  width: 70%;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#gene button {
+  padding: 0.5rem 1rem;
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s
+}
+
+#gene button:hover {
+  background: #EDBC91;
+  color: #000000
+}
+
+#gene-info {
+  margin-top: 1.5rem;
+}
+
+#gene-info h3 {
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+#gene-info p {
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+#gene-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#gene-info li {
+  margin: 0.3rem 0;
+  color: #000000;
+}
+
+.gene-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+/* disease section styling */
+#disease {
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  perspective: 1000;
+}
+
+#disease h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+#disease input {
+  width: 70%;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#disease button {
+  padding: 0.5rem 1rem;
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+#disease button:hover {
+  background: #EDBC91;
+  color: #000000
+}
+
+#disease-info {
+  margin-top: 1.5rem;
+}
+
+#disease-info h3 {
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+#disease-info p {
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+#disease-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#disease-info li {
+  margin: 0.3rem 0;
+  color: #000000;
+}
+
+.disease-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.disease-card h2 {
+  margin-top: 0;
+  color: #000000;
+}
+
+.disease-card p {
+  margin: 5px 0;
+}
+
+/* protein part */
+#protein {
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  perspective: 1000;
+}
+
+#protein h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+#protein input {
+  width: 70%;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#protein button {
+  padding: 0.5rem 1rem;
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s
+}
+
+#protein button:hover {
+  background: #EDBC91;
+  color: #000000
+}
+
+#protein-info {
+  margin-top: 1.5rem;
+}
+
+#protein-info h3 {
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+#protein-info p {
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+#protein-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#protein-info li {
+  margin: 0.3rem 0;
+  color: #000000;
+}
+
+.protein-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.protein-card h2 {
+  margin-top: 0;
+  color: #000000;
+}
+
+.protein-card p {
+  margin: 5px 0;
+}
+
+/* footer */
+.footer {
+  background-color: #0c0e16;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #EDBC91;
+  font-size: 20px;
+  height: 75px;
+  z-index: 100;
+}
+
+.footer-text {
+  margin: auto
+}
+
+.protein-card span {
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+#gene {
+  height: 100%
+}
+
+#disease {
+  height: 100%
+}
+
+#protein {
+  height: 100%
+}
+
+/* Favorites Section */
+#favorites {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 600px;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+#favorites h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Each favorite item */
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.favorite-item:hover {
+  background: #f0f8ff; /* light blue highlight */
+}
+
+/* Remove button */
+.favorite-item button {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.favorite-item button:hover {
+  background: #cc0000;
+}
+
+#gene-fun-facts {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 700px;
+  background: #f0f8ff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#gene-fun-facts h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.carousel {
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  animation: showOne 40s infinite;
+}
+
+/* delays */
+.carousel-item:nth-child(1) { animation-delay: 0s; }
+.carousel-item:nth-child(2) { animation-delay: 4s; }
+.carousel-item:nth-child(3) { animation-delay: 8s; }
+.carousel-item:nth-child(4) { animation-delay: 12s; }
+.carousel-item:nth-child(5) { animation-delay: 16s; }
+.carousel-item:nth-child(6) { animation-delay: 20s; }
+.carousel-item:nth-child(7) { animation-delay: 24s; }
+.carousel-item:nth-child(8) { animation-delay: 28s; }
+.carousel-item:nth-child(9) { animation-delay: 32s; }
+.carousel-item:nth-child(10){ animation-delay: 36s; }
+
+@keyframes showOne {
+  0%   { opacity: 0; }
+  2%   { opacity: 1; }   /* appears quickly */
+  10%  { opacity: 1; }   /* stays visible */
+  12%  { opacity: 0; }   /* disappears BEFORE next starts */
+  100% { opacity: 0; }
+}
+
+#protein-intro {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 700px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#protein-intro h2 {
+  font-size: 1.8rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.protein-facts ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.protein-facts li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #000000;
+}
+
+.protein-callout {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #EDBC91;
+  border: #000000 1em;
+}

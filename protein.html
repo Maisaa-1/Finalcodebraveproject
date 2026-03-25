@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINAL PROJECT</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR AND HEADER -->
+  <header>
+    <div id="logo-container">
+      <img src="logos/Maysaa Assiprojectphoto.png" alt="Signature Logo">
+      <img src="logos/Health and Gene.png" alt="Project Name Logo">
+    </div>
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="gene.html">Gene Information</a></li>
+        <li><a href="disease.html">Disease Information</a></li>
+
+        <li><a href="protein.html">Protein Information</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="protein-intro">
+  <h2>Discover Human Proteins</h2>
+  <div class="protein-facts">
+    <p>Proteins are the molecular machines of life — they build, repair, and regulate everything in your body.</p>
+    <ul>
+      <li>👉  Hemoglobin carries oxygen in your blood.</li>
+      <li>👉 Collagen gives strength and elasticity to your skin and tissues.</li>
+      <li>👉  Enzymes speed up chemical reactions that keep you alive.</li>
+      <li>👉  Antibodies are proteins that defend you against infections.</li>
+      <li>👉  Even your hair and nails are made of protein (keratin).</li>
+      <li>👉 Creatine enhances high-intensity exercise performance, boosts strength, aids muscle recovery, and can increase muscle mass</li>
+    </ul>
+    <p class="protein-callout">
+      Curious to learn more? Search below for info about proteins you’re interested in — and don’t forget to add them to your favorites!
+    </p>
+  </div>
+</section>
+
+  <section id="protein">
+    <h2>Protein Information</h2>
+    <input class="protein-search-bar" type="text" id="protein-input" placeholder="Enter a protein name">
+    <button id="protein-search-btn">Search</button>
+    <div id="protein-info"></div>
+  </section>
+
+  <section id="favorites">
+  <h2>My Favorites</h2>
+  
+  <div id="favorites-list"></div>
+  
+</section>
+</body>
+<footer class="footer">
+  <p class="footer-text">© 2026 Maisaa Assy. All rights reserved</p>
+</footer>
+
+<script src="index.js"></script>
+
+
+</html>
