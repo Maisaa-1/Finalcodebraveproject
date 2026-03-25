@@ -596,3 +596,57 @@ body {
   color: #EDBC91;
   border: #000000 1em;
 }
+
+/* designing the timeline evens for the disease section */
+#disease-timeline{
+  width:100vh;
+  margin: auto;
+  padding:20px
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-left: 3px solid #EDBC91;
+  padding-left: 1rem;
+  padding:2%;
+  background-color:#f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  perspective: 1000;
+  text-align: center;
+  
+}
+.timeline-event h3 {
+  color: #EDBC91;
+  margin: 0;
+}
+.timeline-event p {
+  margin: 0.2rem 0 0;
+}
+.disease-h2{
+  color:#EDBC91;
+  margin-bottom:2%;
+  margin-left:20%;
+}
+
+#disease-callout {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 700px;
+  background: #fafbfc;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#disease-callout h2 {
+  font-size: 1.6rem;
+  color:#EDBC91;
+  margin-bottom: 0.5rem;
+}
+
+#disease-callout p {
+  font-size: 1.1rem;
+  color: #000000;
+}
