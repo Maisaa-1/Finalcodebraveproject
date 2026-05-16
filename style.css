@@ -64,6 +64,80 @@ header {
   border-radius: 4px;
 }
 
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  #logo-container img {
+    width: 95px;
+    height: 80px;
+  }
+
+  #nav-bar {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #nav-bar ul {
+    gap: 35px;
+  }
+
+  #nav-bar li a {
+    font-size: 17px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 15px;
+  }
+
+  #logo-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  #logo-container img {
+    width: 85px;
+    height: 70px;
+  }
+
+  #nav-bar {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  #nav-bar ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #nav-bar li a {
+    font-size: 16px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  #nav-bar ul {
+    gap: 12px;
+  }
+
+  #nav-bar li a {
+    font-size: 14px;
+  }
+
+  #logo-container img {
+    width: 70px;
+    height: 60px;
+  }
+}
 /* Prevent content from being hidden behind fixed navbar */
 body {
   padding-top: 120px;
