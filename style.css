@@ -724,3 +724,248 @@ body {
   font-size: 1.1rem;
   color: #000000;
 }
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Large tablets */
+@media (max-width: 992px) {
+
+  #welcome h1 {
+    font-size: 1.7rem;
+  }
+
+  #gene,
+  #disease,
+  #protein {
+    width: 75%;
+  }
+
+  #favorites,
+  #gene-fun-facts,
+  #protein-intro,
+  #disease-callout {
+    width: 80%;
+  }
+
+  #disease-timeline {
+    width: 85%;
+  }
+
+  .about-p {
+    font-size: 1.3rem;
+  }
+
+  .timeline {
+    padding: 1rem;
+  }
+
+  .footer {
+    font-size: 18px;
+  }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 768px) {
+
+  /* Welcome section */
+  #welcome {
+    height: auto;
+    padding-top: 140px;
+    gap: 20px;
+  }
+
+  #welcome h1 {
+    font-size: 1.5rem;
+  }
+
+  #welcome iframe {
+    height: 350px;
+  }
+
+  .welcome-button {
+    width: 80%;
+    max-width: 250px;
+    font-size: 0.95rem;
+  }
+
+  /* About section */
+  #about {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .about-h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-p {
+    font-size: 1.1rem;
+  }
+
+  #about-closing-tag {
+    font-size: 1rem;
+  }
+
+  /* Main cards */
+  #gene,
+  #disease,
+  #protein {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  /* Inputs */
+  #gene input,
+  #disease input,
+  #protein input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Buttons */
+  #gene button,
+  #disease button,
+  #protein button {
+    width: 100%;
+  }
+
+  /* Favorites */
+  #favorites {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .favorite-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .favorite-item button {
+    width: 100%;
+  }
+
+  /* Fun facts */
+  #gene-fun-facts {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .carousel {
+    height: 90px;
+  }
+
+  .carousel-item {
+    font-size: 0.95rem;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  /* Protein intro */
+  #protein-intro {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .protein-facts li {
+    font-size: 1rem;
+  }
+
+  /* Timeline */
+  #disease-timeline {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .timeline {
+    padding: 1rem;
+  }
+
+  .disease-h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    height: auto;
+    padding: 15px;
+    font-size: 16px;
+    flex-direction: column;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+
+  #welcome {
+    padding-top: 160px;
+  }
+
+  #welcome h1 {
+    font-size: 1.2rem;
+  }
+
+  #welcome iframe {
+    height: 250px;
+  }
+
+  .welcome-button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+
+  .about-h3 {
+    font-size: 1.1rem;
+  }
+
+  .about-p {
+    font-size: 1rem;
+  }
+
+  #about-closing-tag {
+    font-size: 0.9rem;
+  }
+
+  #gene h2,
+  #disease h2,
+  #protein h2,
+  #favorites h2,
+  #gene-fun-facts h2,
+  #protein-intro h2,
+  #disease-callout h2 {
+    font-size: 1.3rem;
+  }
+
+  #gene-info p,
+  #disease-info p,
+  #protein-info p,
+  .timeline-event p,
+  #disease-callout p {
+    font-size: 0.95rem;
+  }
+
+  .carousel {
+    height: 110px;
+  }
+
+  .carousel-item {
+    font-size: 0.9rem;
+  }
+
+  .protein-facts li {
+    font-size: 0.95rem;
+  }
+
+  .timeline {
+    gap: 0.7rem;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
